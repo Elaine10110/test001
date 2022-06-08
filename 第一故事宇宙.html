@@ -3,173 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>多線互動敘事 個人練習</title>
+<title>第一故事宇宙</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:0.1em}0%,to{top:0px}}@keyframes shudder{25%{left:0.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:0.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:0.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%, to{transform:translateX(0em)}5%, 25%, 45%{transform:translateX(-1em)}15%, 35%, 55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%, to{transform:translateY(0em)}5%, 25%, 45%{transform:translateY(-1em)}15%, 35%, 55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%, 8.1%, 82.1%, 31.1%, 38.1%, 44.1%, 40.1%, 47.1%, 74.1%, 16.1%, 27.1%, 72.1%, 24.1%, 95.1%, 6.1%, 36.1%, 20.1%, 4.1%, 91.1%, 14.1%, 87.1%, to{left:0px;top:0px}8%, 82%, 31%, 38%, 44%{left:-1px}40%, 47%, 74%, 16%, 27%{left:1px}72%, 24%, 95%, 6%, 36%{top:-1px}20%, 4%, 91%, 14%, 87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:0.2}64%{opacity:0.4}78%{opacity:0.6}87%{opacity:0.8}92%, to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:black;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,0.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,0.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,0.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,0.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,0.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,0.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,0.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,0.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,0.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,0.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,0.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,0.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,0.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,0.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 0.5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,0.5)}.debug-mode tw-hook{background-color:rgba(0,85,255,0.1) !important}.debug-mode tw-hook::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,0.1) !important}.debug-mode tw-collapsed::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 50%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, rgba(255,204,189,0.25) 0%, rgba(255,204,189,0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, rgba(255,204,189,0) 0%, rgba(255,204,189,0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,0.2)}.debug-mode tw-enchantment{animation:enchantment 0.5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,0.1)}.debug-mode tw-include::before{font-size:0.8rem;padding-left:0.2rem;padding-right:0.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:10em;min-height:1em;padding:0em 0.5em 0.5em 1em;font-size:1.25em;font-family:sans-serif;color:#000;border-left:solid #000 2px;border-top:solid #000 2px;border-top-left-radius:.5em;background:#fff;opacity:1}tw-debugger select{margin-right:1em;width:12em}tw-debugger button{border-radius:3px;border:solid #999 1px;margin:auto 4px;background-color:#fff;font-size:inherit;color:#000}tw-debugger button.enabled{background-color:#eee;box-shadow:inset #ddd 3px 5px 0.5em}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;max-height:40vh;overflow-y:scroll;overflow-x:hidden;z-index:999998;background:#fff;border:inherit;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:0.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger .panel-source,tw-debugger .panel-row-source{font-family:monospace;overflow-x:scroll;white-space:pre;-ms-flex-preferred-size:100%;flex-basis:100%}tw-debugger .panel-row-source{margin:5px 0}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background:#EEE}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#888;text-align:center}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:0.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:0.8;font-size:0.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#444;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,0.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .error-row>*{display:table-cell;padding:0.25em 0.5em}tw-debugger .error-row .error-message{cursor:help}tw-debugger .error-row .error-passage{color:#444}tw-debugger .storylet-row{background-color:rgba(201,233,222,0.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(128,203,178,0.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;opacity:0.4;background-color:rgba(217,217,217,0.3)}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:rgba(166,166,166,0.3)}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,0.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,0.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .tabs{padding-bottom:0.5em}tw-debugger .tab{border-radius:0px 0px 0.5em 0.5em;border-top:none}tw-debugger .resizer{position:absolute;height:3em;border-left:2px solid #ccc;border-right:2px solid #ccc;top:10px;left:4px;width:8px;cursor:ew-resize}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media (min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop ~ tw-backdrop{display:none}tw-link,.link,tw-icon,.enchantment-clickblock{cursor:pointer}tw-link,.enchantment-link{color:#4169E1;font-weight:bold;text-decoration:none;transition:color 0.2s ease-in-out}tw-passage [style^="color"] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-link:hover,tw-passage [style*=" color"][hover="true"] tw-link:hover,tw-passage [style^="color"] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^="color"][hover="true"] .enchantment-link:hover,tw-passage [style*=" color"][hover="true"] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#DD4B39}.visited{color:#6941e1}tw-passage [style^="color"] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^="color"][hover="true"] .visited:hover,tw-passage [style*=" color"][hover="true"] .visited:hover{color:inherit}.visited:hover{color:#E3E}tw-broken-link{color:#993333;border-bottom:2px solid #993333;cursor:not-allowed}tw-passage [style^="color"] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^="color"][hover="true"] tw-broken-link:hover,tw-passage [style*=" color"][hover="true"] tw-broken-link:hover{color:inherit}.enchantment-mouseover{border-bottom:2px dashed #999}.enchantment-mouseout{border:rgba(64,149,191,0.6) 1px solid}.enchantment-mouseout:hover{background-color:rgba(175,197,207,0.75);border:transparent 1px solid;border-radius:0.2em}.enchantment-clickblock{width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,0.5);transition:color 0.2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,0.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,0.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 0.5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 0.5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,0.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,0.75);border:transparent 2px solid;border-radius:0.2em}tw-link.enchantment-button,.enchantment-link.enchantment-button,.enchantment-button:not(.enchantment-link) tw-link,.enchantment-button:not(.enchantment-link) .enchantment-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia, serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media (min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:transparent;font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:transparent;font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 0.5em}tw-story tw-noscript{animation:appear 0.8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media (min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*="width"]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:0.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:0.2}tw-icon[alt]:hover{opacity:0.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:0.2em;padding:0.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,0.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,0.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:0.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:1px;border:1px solid black;font-size:0.8rem;margin:0 0.4rem;padding:2px;white-space:pre}tw-folddown::after{content:"\25b6"}tw-folddown.open::after{content:"\25bc"}tw-open-button::after{content:"Open"}tw-notifier{border-radius:0.2em;padding:0.2em;font-size:1rem;background-color:rgba(223,182,58,0.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid black;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:0.3em 0 0.6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,0.6);background-color:#ff9}ins{color:rgba(0,0,0,0.6);background-color:rgba(255,242,204,0.5);border-radius:0.5em;box-shadow:0em 0em 0.2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 多線互動敘事 個人練習.</tw-noscript></noscript></tw-story>
-<tw-storydata name="多線互動敘事 個人練習" startnode="1" creator="Twine" creator-version="2.3.16" ifid="1DE35213-803E-4534-B489-5A79A6627DC1" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="天堂" color="green"></tw-tag>,<tw-tag name="遺憾" color="red"></tw-tag>,<tw-tag name="記憶" color="red"></tw-tag>,<tw-tag name="Branching" color="red"></tw-tag><tw-passagedata pid="1" name="開場" tags="開場" position="0,217.5" size="200,100">你死了，
-死前你最後聽到的聲音，
-是病床旁心調監測儀的聲音，
-沒有家人的哭喊，
-沒有愛人的耳語，
-在你死後，
-沒有新聞媒體報導你的死訊，
-沒有朋友同事來到你的葬禮為你追思。
-唯一在你身邊的，
-只有你的主治醫生，
-宣布了你的死亡，
-以及殯儀館的人員們，
-讓你能夠走上，
-這個社會認為的，
-最低限度有尊嚴的最後一程。
-你，孓然一身。
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 第一故事宇宙.</tw-noscript></noscript></tw-story>
+<tw-storydata name="第一故事宇宙" startnode="1" creator="Twine" creator-version="2.3.16" ifid="F0846566-DBC1-444A-99BA-96450119FD32" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="返回主選單" tags="" position="217,128.5" size="100,100">
 
-[[...]]
-</tw-passagedata><tw-passagedata pid="2" name="是的。" tags="Branching" position="422.99999999999994,111.83333333333333" size="100,100">(text-colour:magenta)[那您的遺憾是什麼呢?]
+(text-colour:purple)[故事列表]
+&lt;img src=&quot;https://github.com/Elaine10110/test001/blob/main/%E7%AC%AC%E4%B8%80%E6%95%85%E4%BA%8B%E5%B0%8F%E7%B5%84/%E5%B0%81%E9%9D%A21.jpg?raw=true&quot;&gt;
 
-[[我的人生目標沒有達成。]] 
-[[我有一個辜負了的人。]] 
-[[我有想體驗事物沒有體驗到。]] </tw-passagedata><tw-passagedata pid="3" name="不，我沒有。" tags="Branching" position="421.6666666666667,272.8333333333333" size="100,100">
-(text-colour:magenta)[但我們回顧了您的一生，發現您並未為世間留下什麼或帶走什麼?
-這並不正常，您有沒有什麼想做的事情在上一世沒有完成呢?]
+[[故事:小葉的三生三世]]
 
-[[我的人生目標沒有達成。]] 
-[[我有一個辜負了的人。]] 
-[[我有想體驗事物沒有體驗到。]] </tw-passagedata><tw-passagedata pid="4" name="我的人生目標沒有達成。" tags="" position="718.3333333333333,39.16666666666667" size="100,100">(set:$mission to 1)
-(text-colour:magenta)[我了解了。
-很抱歉的通知您，
-您獲得了一個機會，
-能夠帶著記憶投胎。
-您對您在&#39;&#39;1960年&#39;&#39;出生以來所發生的事情都還印象深刻嗎?]
+&lt;img src=&quot;https://github.com/Elaine10110/test001/blob/main/%E7%AC%AC%E4%BA%8C%E6%95%85%E4%BA%8B%E5%B0%8F%E7%B5%84/3.jpg?raw=true&quot;&gt;
+[[故事:陰陽相隔九重天，問天何能一駐邊]]
+</tw-passagedata><tw-passagedata pid="2" name="故事:小葉的三生三世" tags="" position="484,78.5" size="100,100">[(open-url:&quot;http://172.104.72.201/%E5%B0%8F%E8%91%89%E7%9A%84%E4%B8%89%E7%94%9F%E4%B8%89%E4%B8%96.html&quot;)]
 
-[[是的，我記憶猶新。]] 
-[[不，我記不清楚了。]] </tw-passagedata><tw-passagedata pid="5" name="我有一個辜負了的人。" tags="" position="720.0000000000001,214.1666666666667" size="100,100">(set:$relationship to 1)
-(text-colour:magenta)[我了解了。
-很抱歉的通知您，
-您獲得了一個機會，
-能夠帶著記憶投胎。
-您對您在&#39;&#39;1960年&#39;&#39;出生以來所發生的事情都還印象深刻嗎?]
+[[返回主選單]]</tw-passagedata><tw-passagedata pid="3" name="故事:陰陽相隔九重天，問天何能一駐邊" tags="" position="477,260.5" size="100,100">[(open-url:&quot;http://172.104.72.201/%E9%99%B0%E9%99%BD%E7%9B%B8%E9%9A%94%E4%B9%9D%E9%87%8D%E5%A4%A9%E5%95%8F%E5%A4%A9%E4%BD%95%E8%83%BD%E4%B8%80%E9%A7%90%E9%82%8A.html&quot;)]
 
-[[是的，我記憶猶新。]] 
-[[不，我記不清楚了。]] </tw-passagedata><tw-passagedata pid="6" name="我有想體驗事物沒有體驗到。" tags="" position="723.3333333333333,404.1666666666668" size="100,100">(set:$experience to 1)
-(text-colour:magenta)[我了解了。
-很抱歉的通知您，
-您獲得了一個機會，
-能夠帶著記憶投胎。
-您對您在&#39;&#39;1960年&#39;&#39;出生以來所發生的事情都還印象深刻嗎?]
-
-[[是的，我記憶猶新。]] 
-[[不，我記不清楚了。]] </tw-passagedata><tw-passagedata pid="7" name="是的，我記憶猶新。" tags="" position="1103.3333333333335,110.83333333333337" size="100,100">(text-colour:magenta)[我了解了。
-為了幫助您完成您的願望，
-彌補您的遺憾，
-現在向您說明重生的方式。]
-
-[[好的，請開始說明吧。]] </tw-passagedata><tw-passagedata pid="8" name="不，我記不清楚了。" tags="" position="1118.3333333333335,355.8333333333333" size="100,100">(text-colour:magenta)[好吧，讓我簡單的為您說明這60年間所發生的大事
-...
-簡介完畢
-您準備好讓我為您說明重生的規則了嗎?]
-
-[[好的，請開始說明吧。]] </tw-passagedata><tw-passagedata pid="9" name="好的，請開始說明吧。" tags="" position="1298.3333333333337,209.1666666666667" size="100,100">(text-colour:magenta)[雖然您仍無法完全選擇您的身分，
-但您仍然能為您的重生做一些準備，
-決定命運的因素一共有六項:
-財力-您的出生家庭能夠提供給您的金錢
-外貌-他人對您的第一印象。
-健康-身體素質，健康狀態。
-魅力-容易吸引到貴人，受到人們的青睞。
-運氣-幫助您做出更正確的判斷與選擇。
-記憶力-學習會更加的快速有效率。
-每個人都有20點的天賦點可以搭配
-我們會準備幾種組合供您組合，
-請注意，這些命運因素僅代表您天生下來能夠擁有的，
-並不代表您這一次能夠達成的，
-是否能夠完成您的願望，
-只能看您自己的&#39;&#39;選擇&#39;&#39;了。
-那麼，你準備好開始選擇你的天賦了嗎?]
-
-[[準備好了]]</tw-passagedata><tw-passagedata pid="10" name="準備好了" tags="Branching" position="1478.3333333333337,220.8333333333334" size="100,100">請選擇您的天賦點
-
----
-(text-colour:red)[財力-您的出生家庭能夠提供給您的金錢
-外貌-他人對您的第一印象。
-健康-身體素質，健康狀態。
-魅力-容易吸引到貴人，受到人們的青睞。
-運氣-幫助您做出更正確的判斷與選擇。
-記憶力-學習會更加的快速有效率。]
-
-[[財力10，魅力3，運氣5，記憶力2]]
-[[財力5，健康5，外貌5，魅力5]]
-[[健康7，魅力7，運氣1，記憶力5]]</tw-passagedata><tw-passagedata pid="11" name="財力10，魅力3，運氣5，記憶力2" tags="Branching" position="1321.666666666667,400.83333333333337" size="100,100">(set:$money to 100)(set:$charming to 30)(set:$luck to 50)(set:$memory to 20)
-你叫小葉，出生在一個非常富裕的家庭，
-你的父母非常愛你，在學習能力上雖然沒有特別突出，
-但你手握豐富資源的你，再加上一點小聰明，
-你的表現確實比同年齡的孩子優秀一些。
-不過，在財富和能力都不差的你，
-卻有個讓你十分困擾的問題，
-那就是你的健康和外貌，
-因為先天的因素，你非常的肥胖，
-而且同時更伴隨著嚴重的氣喘以及天生的糖尿病，
-因為疾病的關係你也不能運動，甚至連走路都會喘到不行，
-因此你幾乎都在家裡自學，都沒有認識什麼朋友，
-你非常渴望家庭以外的生活，
-今年，你18歲了，你的父母正在苦惱到底要不要讓你去考大學，
-你會...?
-
-[[我要去外面的世界看看]]
-[[不了，我相信我在家裡也能做出一番事業]]</tw-passagedata><tw-passagedata pid="12" name="財力5，健康5，外貌5，魅力5" tags="Branching" position="1636.666666666667,415.83333333333337" size="100,100">(set:$money to 50)(set:$health to 50)(set:$apperance to 50)(set:$charming to 50)
-你叫小葉，出生在一個普通的中產家庭，
-你一直以來，你都過著不錯的生活，
-不錯的外貌，不錯的人緣，不錯的物質生活，
-然而，有件事一直困擾著你，
-就是你&#39;&#39;非常的倒楣&#39;&#39;!!!
-倒楣到什麼地步呢?
-你三天一小摔，五天一大摔，
-上樓梯摔倒，上公車摔倒，
-就連在奶奶鋪著禢禢米的房間，
-你都能摔倒，
-錢包掉了、鑰匙沒帶、搭錯公車......
-基本上每天都至少會發生一件小倒楣事，
-如果今天沒發生，明天就會發生一件大倒楣事，
-最可怕的是，這也嚴重影響到了你的學業表現，
-本來就學習不太好的你，
-更總是在考試時原子筆斷掉(對，不是斷水，是斷掉)、拉肚子、准考證飛走...
-各種狀況層出不窮，
-這天，你18歲了，
-是時候為自己做出重要的選擇了，
-雖然你一向不太相信自己的判斷(因為你倒楣到家的運氣)
-但這次可不一樣，
-你會選擇...
-
-[[進入父母建議的經濟學系就讀]]
-[[進入自己想要學習的藝術科系就讀]]</tw-passagedata><tw-passagedata pid="13" name="健康7，魅力7，運氣1，記憶力5" tags="Branching" position="1926.666666666667,445.83333333333337" size="100,100">(set:$health to 70)(set:$charming to 70)(set:$luck to 10)(set:$memory to 50)
-你叫小葉，出生在一個貧困的家庭，
-你的父母在工廠做著只有基本薪資的工作，
-底下還有三個弟弟妹妹，
-生活非常辛苦。
-不過你對棒球有著極高的天賦，
-在小學的時候被學校的校隊相中，
-從國小、國中、高中以來，在學校老師和教練的幫助下，
-你還能在學校的校隊中享受著打球的快樂，
-當然，你也沒有辜負老師教練們的期待，
-為學校爭取到了很不錯的成績，
-也能夠以體保生之姿進入一間蠻不錯的大學，
-然而，擋在你面前的，是血淋淋的現實，
-父親的身體狀況急轉直下，家裡經濟狀況僅靠母親一人無法支撐，
-雖然你能夠申請到部份獎學金支持，但家裡的狀況仍然入不敷出，
-同時兼具打工、練習、課業可能會讓三項都做不好，
-你會如何選擇呢?
-
-[[堅持進入大學，再想辦法解決經濟問題]]
-[[放棄進入大學，開始工作為家庭努力]]</tw-passagedata><tw-passagedata pid="14" name="我要去外面的世界看看" tags="" position="1218.3333333333337,672.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="15" name="不了，我相信我在家裡也能做出一番事業" tags="" position="1376.666666666667,669.1666666666666" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="16" name="進入父母建議的經濟學系就讀" tags="" position="1536.666666666667,667.5" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="17" name="進入自己想要學習的藝術科系就讀" tags="" position="1720.0000000000002,669.1666666666667" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="18" name="堅持進入大學，再想辦法解決經濟問題" tags="" position="1851.666666666667,595.8333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="19" name="放棄進入大學，開始工作為家庭努力" tags="" position="2001.666666666667,595.8333333333334" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="20" name="..." tags="" position="250,220.83333333333331" size="100,100">
-
-(text-colour:magenta)[使者:歡迎您來到天堂，
-在我們開始之前，
-您是否有什麼遺憾沒有完成呢?]
-
-
-[[是的。]] 
-[[不，我沒有。]]  </tw-passagedata></tw-storydata>
+[[返回主選單]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
